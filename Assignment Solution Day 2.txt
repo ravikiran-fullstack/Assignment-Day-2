@@ -1,0 +1,143 @@
+Assignment- 11/06/2020
+
+1) How do you copy by value a composite data type?
+   Composite Data types such as Objects, Arrays and Functions in Javascript are stored on heap.
+   These are referened by the address of the memory location not the value stored in the address.
+   Therefore it is important to be careful while assigning the composite variables to another variable, as any changes to the copied variable will affect the orginal variable.
+   Its best to do a deep copy of the objects using JSON.parse(JSON.stringify(originalObject)) expression
+   to avoid any issues while operating on the copiedObject.
+
+2) why there is a difference in behavior for copying contents in primitive and non primitive type? 
+   Non primitive data usually store huge amount of the data and copying them using deep copy usually involves iterating over all the data in the original non-primitive data such as an array of 
+   million products, which take up a lot of computational time, to avoid such issues, non-primitive types are copied by refernce 
+   where only the reference to the memory address is copied not the actual contents of the memory location.
+
+3) Use typeof in all the datatypes and check the result
+	typeof(1)             -- number
+	typeof(1.1)			  -- number	
+	typeof("1.1")		  -- string	
+	typeof(true)		  -- boolean
+	typeof(null)          -- object
+	typeof(undefined)     -- undefined
+	typeof([])            -- object
+	typeof({})            -- object
+
+
+4) Write a blog about objects and its internal representation in Javascript
+
+5) execute and see at least 15 cli commands. like mkdir, ls etc.
+   1) ravik@ravikiran MINGW64 ~/OneDrive/Documents/Guvi Bootcamp/Main Bootcamp/Assignments
+	  $ ls
+	  'Day 1'/  'Day 2'/
+   2) ravik@ravikiran MINGW64 ~/OneDrive/Documents/Guvi Bootcamp/Main Bootcamp/Assignments
+	  $ pwd
+	  /c/Users/ravik/OneDrive/Documents/Guvi Bootcamp/Main Bootcamp/Assignments
+   3) ravik@ravikiran MINGW64 ~/OneDrive/Documents/Guvi Bootcamp/Main Bootcamp/Assignments
+	  $ mkdir Day\ 3
+   4) ravik@ravikiran MINGW64 ~/OneDrive/Documents/Guvi Bootcamp/Main Bootcamp/Assignments
+      $ rmdir Day\ 3
+   5) ravik@ravikiran MINGW64 ~/OneDrive/Documents/Guvi Bootcamp/Main Bootcamp/Assignments
+	  $ clear
+   6) ravik@ravikiran MINGW64 ~/OneDrive/Documents/Guvi Bootcamp/Main Bootcamp/Assignments
+	  $ cd Day\ 2
+   7) ravik@ravikiran MINGW64 ~/OneDrive/Documents/Guvi Bootcamp/Main Bootcamp/Assignments
+	  $ cd ..
+   8) ravik@ravikiran MINGW64 ~/OneDrive/Documents/Guvi Bootcamp/Main Bootcamp/Assignments
+	  $ cp test1.txt test2.txt
+   9) ravik@ravikiran MINGW64 ~/OneDrive/Documents/Guvi Bootcamp/Main Bootcamp/Assignments
+	  $ rm test.txt
+   10)ravik@ravikiran MINGW64 ~/OneDrive/Documents/Guvi Bootcamp/Main Bootcamp/Assignments
+	  $ locate test1.txt
+   11)ravik@ravikiran MINGW64 ~/OneDrive/Documents/Guvi Bootcamp/Main Bootcamp/Assignments
+	  $ echo "Ravikiran"
+	  Ravikiran
+   12)ravik@ravikiran MINGW64 ~/OneDrive/Documents/Guvi Bootcamp/Main Bootcamp/Assignments
+	  $ uname
+	  MINGW64_NT-10.0-19041
+
+   13)ravik@ravikiran MINGW64 ~/OneDrive/Documents/Guvi Bootcamp/Main Bootcamp/Assignments
+	  $ chmod 755 test1.txt
+   
+   14) ravik@ravikiran MINGW64 ~/OneDrive/Documents/Guvi Bootcamp/Main Bootcamp/Assignments
+		$ ipconfig
+
+		Windows IP Configuration
+
+
+		Ethernet adapter Ethernet:
+
+		   Media State . . . . . . . . . . . : Media disconnected
+		   Connection-specific DNS Suffix  . :
+
+		Unknown adapter wintunshark0:
+
+		   Media State . . . . . . . . . . . : Media disconnected
+		   Connection-specific DNS Suffix  . :
+
+		Ethernet adapter Ethernet 3:
+
+		   Media State . . . . . . . . . . . : Media disconnected
+		   Connection-specific DNS Suffix  . :
+
+		Wireless LAN adapter Local Area Connection* 1:
+
+		   Media State . . . . . . . . . . . : Media disconnected
+		   Connection-specific DNS Suffix  . :
+
+		Wireless LAN adapter Local Area Connection* 2:
+
+		   Media State . . . . . . . . . . . : Media disconnected
+		   Connection-specific DNS Suffix  . :
+
+		Ethernet adapter Ethernet 2:
+
+		   Media State . . . . . . . . . . . : Media disconnected
+		   Connection-specific DNS Suffix  . :
+
+		Wireless LAN adapter Wi-Fi:
+
+		   Connection-specific DNS Suffix  . :
+		   IPv6 Address. . . . . . . . . . . : 2409:4071:e80:f468:a9e9:f3c1:9028:b91
+		   Temporary IPv6 Address. . . . . . : 2409:4071:e80:f468:1551:fe86:3a09:2cb8
+		   Link-local IPv6 Address . . . . . : fe80::a9e9:f3c1:9028:b91%12
+		   IPv4 Address. . . . . . . . . . . : 172.20.10.2
+		   Subnet Mask . . . . . . . . . . . : 255.255.255.240
+		   Default Gateway . . . . . . . . . : fe80::10af:37b8:a138:d4e5%12
+											   172.20.10.1
+
+		Ethernet adapter Bluetooth Network Connection:
+
+		   Media State . . . . . . . . . . . : Media disconnected
+		   Connection-specific DNS Suffix  . :
+
+   15) ravik@ravikiran MINGW64 ~/OneDrive/Documents/Guvi Bootcamp/Main Bootcamp/Assignments
+		$ netstat
+
+		Active Connections
+
+		  Proto  Local Address          Foreign Address        State
+		  TCP    127.0.0.1:62193        ravikiran:49350        TIME_WAIT
+		  TCP    127.0.0.1:62199        ravikiran:49350        TIME_WAIT
+		  TCP    127.0.0.1:62202        ravikiran:49350        TIME_WAIT
+		  TCP    127.0.0.1:62241        ravikiran:49350        TIME_WAIT
+		  TCP    127.0.0.1:62242        ravikiran:49350        TIME_WAIT
+		  TCP    127.0.0.1:62246        ravikiran:49350        TIME_WAIT
+		  TCP    127.0.0.1:62338        ravikiran:49350        TIME_WAIT
+		  TCP    127.0.0.1:62339        ravikiran:49350        TIME_WAIT
+		  TCP    127.0.0.1:62340        ravikiran:49350        TIME_WAIT
+		  TCP    127.0.0.1:62341        ravikiran:49350        TIME_WAIT
+		  TCP    127.0.0.1:62343        ravikiran:49350        TIME_WAIT
+		  TCP    127.0.0.1:62347        ravikiran:49350        TIME_WAIT
+		  TCP    127.0.0.1:62348        ravikiran:49350        TIME_WAIT
+		  TCP    127.0.0.1:62350        ravikiran:49350        TIME_WAIT
+		  TCP    127.0.0.1:62353        ravikiran:9229         SYN_SENT
+		  TCP    172.20.10.2:61891      40.90.189.152:https    ESTABLISHED
+		  TCP    172.20.10.2:61900      lb-140-82-112-25-iad:https  ESTABLISHED
+ 	   
+
+6) What is the difference between window, screen, and document in Javascript
+
+7) Try the rest countries api
+Extract and print the flag url of all the countries in console. use the html template. 
+
+https://restcountries.eu/rest/v2/all
