@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style_skeleton.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="one-third column">
+        <button class="button button-primary" id="xmlRequestButton" onclick="retrieveCountriesDataXml()">Using XmlHTTPRequest</button>
+      </div>
+      <div class="one-third column">
+        <button class="button button-primary" id="fetchRequestButton" onclick="retrieveCountriesDataFetch()">Using FetchApi</button>
+      </div>
+      <div class="one-third column">
+        <button class="button button-primary" onclick="resetCountriesData()">Reset</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="twelve column">
+        <table id="countriesTable"></table>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script src="xmlhttprequest.js"></script>
+  <script src="fetch.js"></script>
+</body>
+
+</html>
