@@ -172,10 +172,14 @@ Assignment- 11/06/2020
 
    The Document interface is any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree. The DOM tree includes elements 
    such as <body> and <table>, among many others. It provides functionality globally to the document, like how to obtain the page's URL and create new elements in the document.
-   
-	
+   	
 
 7) Try the rest countries api
-Extract and print the flag url of all the countries in console. use the html template. 
+ Extract and print the flag url of all the countries in console. use the html template. 
 
-https://restcountries.eu/rest/v2/all
+ https://restcountries.eu/rest/v2/all
+
+
+Solution: Link of code on Github  							: https://github.com/ravikiran-fullstack/Assignment-Day-2
+          Link github pages which shows the implementation  : https://ravikiran-fullstack.github.io/Assignment-Day-2/
+
