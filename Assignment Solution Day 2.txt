@@ -24,7 +24,35 @@ Assignment- 11/06/2020
 
 
 4) Write a blog about objects and its internal representation in Javascript
+   Objects are the unordered collection of related data, these data can be primitive or reference data type, objects are the fundamental building block of Modern Javascript.
+   Objects in Javascript are reference data types, reference pointer points to a location in memory where the object data is stored. Internally objects contain pair of key and values.
+   where key can be of type string, or number or Symbol, and value can be of any data types. Objects can not contain duplicate keys, if inserted with a duplicate key, it just updates
+   the value of the key that already exists with the new one. An object can contain properties/attributes and or functions, these properties and functions can be of its own or 
+   inherited from its parent object. hasOwnProperty method can be used to verify if the property if of its or own or if it's inherited.
+   
+    Data properties in JS objects can four attributes, value: the property's value, writable: if True, property can be modified, enumberable: when true, it can be iterated over using
+	the for in loop. Configurable: If true, we can delete the property from the object. 
+	
+	There are two ways to access the values of the objects. 1st using the dot notaion and 2nd using the Bracket notation.
+	
+	Objects values can be iterated using the for in loop as below
+		
+		let person = { 
+			gender : "male"
+		} 
 
+		var person1 = Object.create(person); 
+		person1.name = "RK"; 
+		person1.age = 30; 
+		person1.nationality = "Indian"; 
+
+		for (let key in person1) { 
+		// Output : name, age, nationality 
+		// and gender 
+			console.log(key); 
+		}		 
+
+	
 5) execute and see at least 15 cli commands. like mkdir, ls etc.
    1) ravik@ravikiran MINGW64 ~/OneDrive/Documents/Guvi Bootcamp/Main Bootcamp/Assignments
 	  $ ls
@@ -136,6 +164,16 @@ Assignment- 11/06/2020
  	   
 
 6) What is the difference between window, screen, and document in Javascript
+   Javascript screen object can be used to display screen properties such as width, height, available width, height, color depth and pixel depth. 
+   Screen object is a proprty in window object.
+   
+   Window objects reprasents DOM in the browser, its part of the browser API not the Javascript, it is a global object that reprasents current state of the code running in them
+   browser.
+
+   The Document interface is any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree. The DOM tree includes elements 
+   such as <body> and <table>, among many others. It provides functionality globally to the document, like how to obtain the page's URL and create new elements in the document.
+   
+	
 
 7) Try the rest countries api
 Extract and print the flag url of all the countries in console. use the html template. 

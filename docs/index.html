@@ -13,6 +13,13 @@
 <body>
   <div class="container">
     <div class="row">
+      <div class="twelve u-text-center text-success">
+        <p>Retrieving Countries Data</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
       <div class="one-third column">
         <button class="button button-primary" id="xmlRequestButton" onclick="retrieveCountriesDataXml()">Using XmlHTTPRequest</button>
       </div>
@@ -27,8 +34,10 @@
 
   <div class="container">
     <div class="row">
-      <div class="twelve column">
-        <table id="countriesTable"></table>
+      <div class="twelve">
+        <table class="countryTableStyle" id="countriesTable">
+          <thead></thead>
+        </table>
       </div>
     </div>
   </div>
