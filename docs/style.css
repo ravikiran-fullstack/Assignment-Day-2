@@ -9,6 +9,44 @@
   font-size: 24px;
 }
 
-.countryTableStyle{
+/* .countryTableStyle{
   margin-left: 12rem;
+}
+
+.thStyle{
+  width: 200px;
+  border: 1px solid #aaaaaa;
+  text-align: center;
+  font-size: bold;
+  background-color: #b8deec;
+}
+
+.tdStyle{
+  width: 200px;
+  border: 1px solid #aaaaaa;
+  text-align: center;
+} */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 50px;
+}
+
+tr{
+  border: 1px solid #cacaca;
+}
+
+thead tr{
+  background-color: #b8deec;
+}
+
+th, td {
+  text-align: center;
+  padding: 8px;
+  width: 25%;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
 }

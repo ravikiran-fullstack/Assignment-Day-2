@@ -13,7 +13,6 @@ function retrieveCountriesDataXml() {
     } else {
       //console.log('response', JSON.parse(req.response));
       countriesData = JSON.parse(req.response);
-      console.log(countriesData[0]);
       createCountriesDataTable(countriesData);
       //console.log(`Done, got ${req.response.length} bytes`);
     }
