@@ -1,5 +1,6 @@
 function retrieveCountriesDataXml() {
   document.getElementById('fetchRequestButton').disabled = true;
+  document.getElementById('loadingSpinner').classList = 'lds-default u-center-block';
   let req = new XMLHttpRequest(); // 1. Create a new XMLHttpRequest object
   let countriesData;
   req.open("GET", "https://restcountries.eu/rest/v2/all"); // 2. Initialize it: GET-request for the URL
@@ -14,6 +15,7 @@ function retrieveCountriesDataXml() {
       //console.log('response', JSON.parse(req.response));
       countriesData = JSON.parse(req.response);
       createCountriesDataTable(countriesData);
+      document.getElementById('loadingSpinner').classList.remove('lds-default');
       //console.log(`Done, got ${req.response.length} bytes`);
     }
   };
