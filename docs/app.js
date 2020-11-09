@@ -6,6 +6,9 @@ function resetCountriesData(){
 
 function createCountriesDataTable(countriesDataObj) {
   const countriesTable = document.querySelector("#countriesTable");
+  if(countriesTable){
+    countriesTable.innerHTML = '';
+  }
   const thead = createCustomElement('thead', null);//  document.createElement("thead");
   const tr = createCustomElement('tr', null); //document.createElement("tr");
 
